@@ -1,12 +1,13 @@
 # FLASK_APP=test_webapp.py flask run
 from flask import Flask as any_name
+import datetime
 
 #app = Flask(__name__)
 app = any_name(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return datetime.datetime.now().ctime()
 
 @app.route("/static")
 def static_content():
