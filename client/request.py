@@ -2,8 +2,6 @@
 from flask import Flask as any_name, render_template
 from urllib.request import urlopen
 
-
-
 #app = Flask(__name__)
 app = any_name(__name__)
 
@@ -11,6 +9,10 @@ app = any_name(__name__)
 def flask():
     content = urlopen("http://172.17.0.2:8080").read()
     return render_template("index.html", time=content)
+
+@app.route("/test/")
+def test():
+    return 'working'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8888)
