@@ -7,7 +7,7 @@ app = any_name(__name__)
 
 @app.route("/")
 def flask():
-    content = urlopen("http://172.17.0.2:8080").read()
+    content = urlopen("http://server:8080").read()
     return render_template("index.html", time=content)
 
 @app.route("/test/")
