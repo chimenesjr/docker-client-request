@@ -14,3 +14,4 @@ Flashk
 
  `docker run -d -p 8888:8888 client`
 
+ `docker-compose up`
