@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: python-server
+  labels: 
+    app: python-server
+    deployment: v1
+    tier: prod
+spec:
+  containers:
+  - name: python-server
+    image: gcr.io/kigali-243810/python-server:v1
+    ports:
+    - containerPort: 8080
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: python-client
+  labels: 
+    app: python-client
+    deployment: v1
+    tier: prod
+spec:
+  containers:
+  - name: python-client
+    image: gcr.io/kigali-243810/python-client:v1
+    ports:
+    - containerPort: 8888
