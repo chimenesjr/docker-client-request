@@ -10,9 +10,9 @@ Flashk
  
  `$ docker build -t client ./client/.`
 
- `$ docker run -d -p 8080:8080 server`
+ `$ docker run -d -p 8080:8080 --name server server`
 
- `$ docker run -d -p 8888:8888 client`
+ `$ docker run -d -p 8888:8888 --name client client`
  
  or
 
